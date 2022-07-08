@@ -1,0 +1,10 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/nfs/homes/twinters/Projets/fractol-42'
+gcc -Wall -Ofast -Wextra -Werror -I/src/ -c src/fractol.c -o src/fractol.o
+gcc -Wall -Ofast -Wextra -Werror -I/src/ -c src/draw.c -o src/draw.o
+gcc -Wall -Ofast -Wextra -Werror -I/src/ -c src/hook.c -o src/hook.o
+make -C mlx_linux
+make -C libft
+gcc -Wall -Ofast -Wextra -Werror src/fractol.o src/draw.o src/hook.o -L mlx_linux -lmlx -lXext -lX11 -L libft -lft -o fractol
+make: Leaving directory '/nfs/homes/twinters/Projets/fractol-42'
+ 
