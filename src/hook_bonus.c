@@ -6,7 +6,7 @@
 /*   By: twinters <twinters@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:28:18 by twinters          #+#    #+#             */
-/*   Updated: 2022/07/06 22:17:29 by twinters         ###   ########.fr       */
+/*   Updated: 2022/07/08 17:42:59 by twinters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,9 @@ int	key_hook(int keycode, t_mlx *mlx)
 	if (keycode == K_UP || keycode == K_DOWN)
 		mlx->offset.y += ((float)keycode - K_RIGHT) * mlx->zoom / 10;
 	if (keycode == 'p')
-		mlx->iteri += 1;
+		mlx->iteri += 10;
 	else if (keycode == 'o' && mlx->iteri > 0)
-		mlx->iteri -= 1;
+		mlx->iteri -= 10;
 	draw_fractal(*mlx);
 	return (0);
 }
