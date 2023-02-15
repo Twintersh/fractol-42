@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.h                                          :+:      :+:    :+:   */
+/*   fractol.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: twinters <twinters@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 12:13:31 by twinters          #+#    #+#             */
-/*   Updated: 2022/07/08 17:40:30 by twinters         ###   ########.fr       */
+/*   Updated: 2022/07/08 17:41:46 by twinters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "libft/libft.h"
 # include "mlx_linux/mlx.h"
 # include "mlx_linux/mlx_int.h"
+# include <math.h>
 
 // ERRORS ID
 
@@ -26,6 +27,7 @@
 //	CONFIG
 
 # define WIN_NAME "fractol"
+# define WIN_SIZE 500
 
 //	KEYS
 
@@ -51,6 +53,25 @@
 # define WHITE 0xFFFFFF
 # define BLACK 0x000000
 
+# define BLUE_TRANS 0x5BCEFA
+# define PINK_TRANS 0xF5A9B8
+
+# define YELLOW_NB 0xFCF434
+# define PURPLE_NB 0x9C59D1
+# define BLACK_NB 0x2C2C2C
+
+# define MAGENTA_PAN 0xFF218C
+# define YELLOW_PAN 0xFFD800
+# define CYAN_PAN 0x21B1FF
+
+# define RED_LGBT 0xFF0018
+# define ORANGE_LGBT 0xFFA52C
+# define YELLOW_LGBT 0xFFFF41
+# define GREEN_LGBT 0x008018
+# define BLUE_LGBT 0x0000F9
+# define PURPLE_LGBT 0x86007D
+
+
 typedef struct s_data {
 	void	*img;
 	char	*addr;
@@ -75,9 +96,9 @@ typedef struct s_mlx
 	int					xx;
 	int					iteri;
 	int					color;
+	int					opti;
 	float				zoom;
-	long double			offset_x;
-	long double			offset_y;
+	struct s_cvalues	offset;
 	struct s_data		*img;
 	struct s_cvalues	c;
 }	t_mlx;
@@ -88,7 +109,7 @@ int				fractal(t_mlx mlx);
 int				mandelbrot_set(t_mlx mlx);
 void			draw_fractal(t_mlx mlx);
 t_cvalues		which_fractal(char *arg);
-t_cvalues		set_c(float x, float y);
+int				burning_ship(t_mlx mlx);
 
 //	fractol.c
 
@@ -96,6 +117,7 @@ int				ft_close(t_mlx *mlx);
 int				key_hook(int keycode, t_mlx *mlx);
 int				trgb(int t, int r, int g, int b);
 int				fractal_color(int color, int i);
+t_cvalues		set_c(float x, float y);
 
 // hooks.c
 
@@ -103,6 +125,10 @@ void			my_mlx_pixel_put(t_data *data, int x, int y, int color);
 int				mouse_hook(int button, int x, int y, t_mlx *mlx);
 void			print_errors(int index);
 void			my_mlx_pixel_put(t_data *data, int x, int y, int color);
-long double		get_px_coordinates(int px, float zoom, long double offset);
+long double		px_coo(int px, float zoom, long double offset);
+
+// colors.c
+
+int				other_colors(int color, int i);
 
 #endif
