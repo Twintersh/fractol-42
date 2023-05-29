@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Feb 15 18:32:59 2023
+# Make data base, printed on Mon May 29 17:48:34 2023
 
 # Variables
 
@@ -22,6 +22,8 @@ DESKTOP_SESSION = ubuntu
 OBJ = $(SRC:.c=.o)
 # environment
 XDG_SESSION_CLASS = user
+# environment
+VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
 # makefile (from 'Makefile', line 4)
 SRC = src/fractol.c src/draw.c src/hook.c src/colors.c
 # environment
@@ -37,18 +39,19 @@ GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /nfs/homes/twinters/Projets/fractol-42
+CURDIR := /tmp/fractol-42
 # makefile
 SHELL = /bin/sh
 # environment
+GDM_LANG = en
+# environment
 VTE_VERSION = 6003
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"en-us","osLocale":"en","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 9:430093
+JOURNAL_STREAM = 9:170035
 # makefile (from 'Makefile', line 7)
 CFLAGS = -Wall -Ofast -Wextra -Werror
- 
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -62,17 +65,17 @@ GNUMAKEFLAGS :=
 # environment
 XDG_DATA_DIRS = /usr/share/gnome:/usr/share/ubuntu:/nfs/homes/twinters/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/101047/bus,guid=d987db86c9cbb92e88798a6363ed0330
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/101047/bus
 # environment
-_ = /nfs/homes/twinters/Downloads/code-stable-x64-1673285154/VSCode-linux-x64/bin/code
+_ = /nfs/homes/twinters/Downloads/code-stable-x64-1677667829/VSCode-linux-x64/bin/code
 # environment
-MANAGERPID = 133723
+MANAGERPID = 37507
 # environment
-VSCODE_CWD = /nfs/homes/twinters/Projets/fractol-42
+VSCODE_CWD = /tmp/fractol-42
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_101047_PyjKMs
+KRB5CCNAME = FILE:/tmp/krb5cc_101047_eofmXZ
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -82,7 +85,7 @@ GPG_AGENT_INFO = /run/user/101047/gnupg/S.gpg-agent:0:1
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/2B3.42angouleme.fr:@/tmp/.ICE-unix/134001,unix/2B3.42angouleme.fr:/tmp/.ICE-unix/134001
+SESSION_MANAGER = local/2D7.42angouleme.fr:@/tmp/.ICE-unix/37810,unix/2D7.42angouleme.fr:/tmp/.ICE-unix/37810
 # environment
 XDG_RUNTIME_DIR = /run/user/101047
 # environment
@@ -90,7 +93,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 2544787e09984ac0bc33bb28877f017e
+INVOCATION_ID = 8665fa1539bf4420bf5ba315549bf2db
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -103,16 +106,18 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/101047/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 183340
 # automatic
 %F = $(notdir $%)
 # environment
 DISPLAY = :0
 # environment
-PWD = /nfs/homes/twinters/Projets/fractol-42
+PWD = /tmp/fractol-42
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 133963
+SSH_AGENT_PID = 37772
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -124,7 +129,7 @@ HOME = /nfs/homes/twinters
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /nfs/homes/twinters/.config/Code/CachedData/97dec172d3256f8ca4bfb2143f3f76b503ca0534
+VSCODE_CODE_CACHE_PATH = /nfs/homes/twinters/.config/Code/CachedData/704ed70d4fd1c6bd6342c436f1ede30d1cff4710
 # environment
 LOGNAME = twinters
 # environment
@@ -151,6 +156,10 @@ QT_IM_MODULE = ibus
 SHLVL = 1
 # makefile (from 'Makefile', line 1)
 CC = gcc
+# environment
+TERMINATOR_UUID = urn:uuid:39653061-0733-4cfd-bd6a-23fd99740bec
+# environment
+VSCODE_CRASH_REPORTER_SANDBOXED_HINT = 1
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -170,15 +179,17 @@ LFLAGS = -L mlx_linux -lmlx -lXext -lX11 -L libft -lft
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /nfs/homes/twinters/Projets
+OLDPWD = /tmp/fractol-42/src
 # default
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
 # environment
+LANGUAGE = en
+# environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
-VSCODE_IPC_HOOK = /run/user/101047/vscode-e1844959-1.74.3-main.sock
+VSCODE_IPC_HOOK = /run/user/101047/vscode-e1844959-1.77-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -188,9 +199,13 @@ MFLAGS = -pqrR
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
+VSCODE_L10N_BUNDLE_LOCATION = 
+# environment
 GDK_BACKEND = x11
 # automatic
 +F = $(notdir $+)
+# environment
+NO_AT_BRIDGE = 1
 # environment
 QT_ACCESSIBILITY = 1
 # default
@@ -201,14 +216,8 @@ MAKEFILES :=
 PAGER = less
 # environment
 LC_ALL = C
-# environment
-DBUS_STARTER_BUS_TYPE = session
-# environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/8bbf235c_dc38_4662_9781_125e654e6504
 # automatic
 ^F = $(notdir $^)
-# environment
-GNOME_TERMINAL_SERVICE = :1.979
 # default
 SUFFIXES := 
 # environment
@@ -226,11 +235,9 @@ TERM = xterm-256color
 # environment
 DOCKER_HOST = unix:///run/user/101047/docker.sock
 # environment
-VSCODE_PID = 165074
-# environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/101047/bus,guid=d987db86c9cbb92e88798a6363ed0330
+VSCODE_PID = 172426
 # variable set hash-table stats:
-# Load=109/1024=11%, Rehash=0, Collisions=13/145=9%
+# Load=113/1024=11%, Rehash=0, Collisions=14/149=9%
 
 # Pattern-specific Variable Values
 
@@ -238,10 +245,10 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/101047/bus,guid=d987db86c9cbb92e88798
 
 # Directories
 
-# . (device 56, inode 74515794): 9 files, no impossibilities.
-# src (device 56, inode 75105147): 8 files, no impossibilities so far.
+# . (device 64768, inode 6691076): 9 files, no impossibilities.
+# src (device 64768, inode 6692035): 5 files, no impossibilities so far.
 
-# 17 files, no impossibilities in 2 directories.
+# 14 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -270,6 +277,7 @@ reb: fclean bonus
 #  Modification time never checked.
 #  File has not been updated.
 
+ 
 all: fractol
 #  Phony target (prerequisite of .PHONY).
 #  Command line target.
@@ -285,53 +293,22 @@ all: fractol
 #  Modification time never checked.
 #  File has not been updated.
 
-src/colors.o: src/colors.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/colors'
-#  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := src/colors.o
-# automatic
-# % := 
-# automatic
-# * := src/colors
-# automatic
-# + := src/colors.c
-# automatic
-# | := 
-# automatic
-# < := src/colors.c
-# automatic
-# ^ := src/colors.c
-# automatic
-# ? := src/colors.c
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
-#  recipe to execute (from 'Makefile', line 12):
-	$(CC) $(CFLAGS) -I/src/ -c $< -o $@
-
-src/hook.o: src/hook.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/hook'
-#  Last modified 2023-02-15 18:31:36.981186228
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 12):
-	$(CC) $(CFLAGS) -I/src/ -c $< -o $@
+# Not a target:
+src/colors.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
-src/draw.c:
-#  Implicit rule search has been done.
-#  Last modified 2023-02-15 18:18:15.059224469
-#  File has been updated.
-#  Successfully updated.
+src/hook.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2023-02-15 18:32:52.515864637
+#  Last modified 2023-05-29 17:47:16.725616133
 #  File has been updated.
 #  Successfully updated.
 
@@ -348,14 +325,31 @@ debug: src/fractol.o src/draw.o src/hook.o src/colors.o
 src/fractol.o: src/fractol.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/fractol'
-#  Last modified 2023-02-15 18:31:36.841188678
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := src/fractol.o
+# automatic
+# % := 
+# automatic
+# * := src/fractol
+# automatic
+# + := src/fractol.c
+# automatic
+# | := 
+# automatic
+# < := src/fractol.c
+# automatic
+# ^ := src/fractol.c
+# automatic
+# ? := src/fractol.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
 #  recipe to execute (from 'Makefile', line 12):
 	$(CC) $(CFLAGS) -I/src/ -c $< -o $@
 
 # Not a target:
- 
 bonus:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -372,20 +366,6 @@ fclean: clean
 	rm -rf $(NAME_BONUS)
 
 # Not a target:
-src/colors.c:
-#  Implicit rule search has been done.
-#  Last modified 2023-02-15 18:30:29.614365007
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/hook.c:
-#  Implicit rule search has been done.
-#  Last modified 2023-02-15 18:17:52.867612346
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
 .DEFAULT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -394,7 +374,7 @@ src/hook.c:
 # Not a target:
 src/fractol.c:
 #  Implicit rule search has been done.
-#  Last modified 2023-02-15 18:30:57.125883602
+#  Last modified 2023-05-29 17:48:22.206550005
 #  File has been updated.
 #  Successfully updated.
 
@@ -420,29 +400,26 @@ clean:
 	make -C $(LFT) clean
 	rm -rf src/*.o
 
-src/draw.o: src/draw.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/draw'
-#  Last modified 2023-02-15 18:31:36.917187349
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 12):
-	$(CC) $(CFLAGS) -I/src/ -c $< -o $@
+# Not a target:
+src/draw.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
-# Load=21/1024=2%, Rehash=0, Collisions=0/65=0%
+# Load=18/1024=2%, Rehash=0, Collisions=0/53=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 43 / storage = 360 B / avg = 8 B
-# current buf: size = 8162 B / used = 360 B / count = 43 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 34 / storage = 270 B / avg = 7 B
+# current buf: size = 8162 B / used = 270 B / count = 34 / avg = 7 B
 
-# strcache performance: lookups = 77 / hit rate = 44%
+# strcache performance: lookups = 65 / hit rate = 47%
 # hash-table stats:
-# Load=43/8192=1%, Rehash=0, Collisions=2/77=3%
-# Finished Make data base on Wed Feb 15 18:32:59 2023
+# Load=34/8192=0%, Rehash=0, Collisions=2/65=3%
+# Finished Make data base on Mon May 29 17:48:34 2023
 
  

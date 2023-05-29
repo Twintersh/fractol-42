@@ -49,7 +49,7 @@ int	fractal_color(int color, int i)
 {
 	int	mod;
 
-	mod = color % 10;
+	mod = color % 8;
 	if (mod == 0)
 		return (trgb(0, i * 10, i * 2, i * 5));
 	else if (mod == 1)
@@ -66,8 +66,6 @@ int	fractal_color(int color, int i)
 		return (trgb(0, i * 5, i * 28, i * 35));
 	else if (mod == 7)
 		return (trgb(0, 22 * i, 7 * i, 81 * i));
-	else
-		return (other_colors(color, i));
 	return (0);
 }
 

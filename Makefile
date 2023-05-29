@@ -1,7 +1,7 @@
 CC = gcc
 NAME = fractol
 LFT = libft
-SRC= src/fractol.c src/draw.c src/hook.c src/colors.c
+SRC= src/fractol.c src/draw.c src/hook.c
 OBJ=$(SRC:.c=.o)
 LFLAGS = -L mlx_linux -lmlx -lXext -lX11 -L libft -lft
 CFLAGS = -Wall -Ofast -Wextra -Werror
@@ -25,6 +25,9 @@ fclean : clean
 	make -C $(LFT) fclean
 	rm -rf $(NAME)
 	rm -rf $(NAME_BONUS)
+
+run : all
+	./$(NAME) $(ARG)
 
 re : fclean all
 
