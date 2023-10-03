@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.h                                          :+:      :+:    :+:   */
+/*   fractol_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: twinters <twinters@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 12:13:31 by twinters          #+#    #+#             */
-/*   Updated: 2022/06/27 13:39:28 by twinters         ###   ########.fr       */
+/*   Updated: 2022/06/28 23:06:25 by twinters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRACTOL_H
-# define FRACTOL_H
+#ifndef FRACTOL_BONUS_H
+# define FRACTOL_BONUS_H
 
 # include "libft/libft.h"
 # include "mlx_linux/mlx.h"
 # include "mlx_linux/mlx_int.h"
+# include <math.h>
 
 // ERRORS ID
 
@@ -25,7 +26,7 @@
 
 //	CONFIG
 
-# define WIN_NAME "fractol"
+# define WIN_NAME "fractol_bonus"
 
 //	KEYS
 
@@ -75,34 +76,35 @@ typedef struct s_mlx
 	int					xx;
 	int					iteri;
 	int					color;
+	int					opti;
 	float				zoom;
-	long double			offset_x;
-	long double			offset_y;
+	struct s_cvalues	offset;
 	struct s_data		*img;
 	struct s_cvalues	c;
 }	t_mlx;
 
-//	draw.c
+//	draw_bonus.c
 
 int				fractal(t_mlx mlx);
 int				mandelbrot_set(t_mlx mlx);
 void			draw_fractal(t_mlx mlx);
 t_cvalues		which_fractal(char *arg);
-t_cvalues		set_c(float x, float y);
+int				burning_ship(t_mlx mlx);
 
-//	fractol.c
+//	fractol_bonus.c
 
 int				ft_close(t_mlx *mlx);
 int				key_hook(int keycode, t_mlx *mlx);
 int				trgb(int t, int r, int g, int b);
 int				fractal_color(int color, int i);
+t_cvalues		set_c(float x, float y);
 
-// hooks.c
+// hooks_bonus.c
 
 void			my_mlx_pixel_put(t_data *data, int x, int y, int color);
 int				mouse_hook(int button, int x, int y, t_mlx *mlx);
 void			print_errors(int index);
 void			my_mlx_pixel_put(t_data *data, int x, int y, int color);
-long double		get_px_coordinates(int px, float zoom, long double offset);
+long double		px_coo(int px, float zoom, long double offset);
 
 #endif

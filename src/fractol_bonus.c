@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.c                                          :+:      :+:    :+:   */
+/*   fractol_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: twinters <twinters@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 16:11:48 by twinters          #+#    #+#             */
-/*   Updated: 2022/06/27 16:44:14 by twinters         ###   ########.fr       */
+/*   Updated: 2022/06/28 22:23:17 by twinters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../fractol.h"
+#include "../fractol_bonus.h"
 
 int	main(int argc, char **argv)
 {
@@ -23,9 +23,10 @@ int	main(int argc, char **argv)
 	mlx.x = 1000;
 	mlx.y = 1000;
 	mlx.iteri = 50;
+	mlx.opti = 0;
 	mlx.zoom = 1;
-	mlx.offset_x = 0;
-	mlx.offset_y = 0;
+	mlx.offset.x = 0;
+	mlx.offset.y = 0;
 	mlx.color = 0;
 	mlx.win = mlx_new_window(mlx.ptr, mlx.x, mlx.y, WIN_NAME);
 	draw_fractal(mlx);
@@ -33,6 +34,15 @@ int	main(int argc, char **argv)
 	mlx_hook(mlx.win, 17, 0, ft_close, &mlx);
 	mlx_hook(mlx.win, 4, (1L << 2), mouse_hook, &mlx);
 	mlx_loop(mlx.ptr);
+}
+
+t_cvalues	set_c(float x, float y)
+{
+	t_cvalues	c;
+
+	c.x = x;
+	c.y = y;
+	return (c);
 }
 
 int	fractal_color(int color, int i)
