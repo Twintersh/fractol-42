@@ -1,9 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/tmp/fractol-42'
-gcc -Wall -Ofast -Wextra -Werror -I/src/ -c src/fractol.c -o src/fractol.o
-gcc -Wall -Ofast -Wextra -Werror -I/src/ -c src/draw.c -o src/draw.o
-gcc -Wall -Ofast -Wextra -Werror -I/src/ -c src/hook.c -o src/hook.o
-make: Leaving directory '/tmp/fractol-42'
- 
-make: *** No rule to make target 'src/colors.o', needed by 'fractol'.
-
